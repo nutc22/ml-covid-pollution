@@ -65,11 +65,12 @@ per terminare il processo `^C`
 ## modificare o clonare l'immagine
 
 se si desidera ri-costruire l'immagine docker:
-````shell
+
+```shell
 docker build . -t datascience-notebook:<tag>
 ```
 
 a questo punto si può creare il container:
-````shell
+```shell
 docker run -it --user $(id -u):$(id -g) --group-add users -v ${PWD}:/home/jovyan/work/ -p <PORT>:8888 -e GEN_CERT=yes datascience-notebook:<tag>
 ```

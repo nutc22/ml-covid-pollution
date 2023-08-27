@@ -60,3 +60,16 @@ per terminare il processo `^C`
 | min_pm10_ug/m3_median_jan_jun_2020  | Valore minimo espresso in μg/m3 della mediana giornaliera di pm10 rilevato nel periodo gen-giu 2020              |
 | Zone                                | Area geografica di appartenenza del comune                                                                       |
 | Region                              | Regione di appartenenza del comune                                                                               |
+
+
+## modificare o clonare l'immagine
+
+se si desidera ri-costruire l'immagine docker:
+````shell
+docker build . -t datascience-notebook:<tag>
+```
+
+a questo punto si può creare il container:
+````shell
+docker run -it --user $(id -u):$(id -g) --group-add users -v ${PWD}:/home/jovyan/work/ -p <PORT>:8888 -e GEN_CERT=yes datascience-notebook:<tag>
+```

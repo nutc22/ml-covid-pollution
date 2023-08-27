@@ -13,7 +13,7 @@ chmod a+rw ml-covid-pollution
 cd ml-covid-pollution
 
 docker pull nutc22/ml-covid-pollution:0.1
-docker run -it --user $(id -u):$(id -g) --group-add users -v ${PWD}:/home/jovyan/work/ -p <PORT>:8888 -e GEN_CERT=yes nutc22/ml-covid-pollution:0.1
+docker run -it --rm --user $(id -u):$(id -g) --group-add users -v ${PWD}:/home/jovyan/work/ -p <PORT>:8888 -e GEN_CERT=yes nutc22/ml-covid-pollution:0.1
 ```
 Ricordarsi di sostituire la porta da esporre al posto di `<PORT>`
 

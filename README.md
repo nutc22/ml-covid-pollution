@@ -1,5 +1,10 @@
 # ml-covid-pollution
 
+### Esame Data Science e Applicazioni in Fisica - UniPG
+## Osservazione del quadro epidemiologico COVID-19 e studio della possibile interazione con l'inquinamento da polveri sottili nel periodo Gennaio - Giugno 2020
+##### Daniele Nucciarelli 
+Perugia, 1 settembre 2023
+
 ## setup
 
 ```shell
@@ -7,11 +12,13 @@ git clone https://github.com/nutc22/ml-covid-pollution.git
 chmod a+rw ml-covid-pollution
 cd ml-covid-pollution
 docker run -it --user $(id -u):$(id -g) --group-add users -v ${PWD}:/home/jovyan/work/ -p <PORT>:8888 -e GEN_CERT=yes jupyter/datascience-notebook:2023-05-15
-
-https://<IP-ADDR>:<PORT>
-fidarsi del certificato
-
 ```
+Ricordarsi di sostituire la porta da esporre al posto di `<PORT>`
+
+Visitare il sito `https://<IP-ADDR>:<PORT`
+e fidarsi del certificato auto firmato.
+
+
 per terminare il processo `^C`
 
 ## features description
